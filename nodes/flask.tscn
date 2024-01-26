@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ceie3x0fh7c8o"]
 
-[ext_resource type="Texture2D" uid="uid://daj5buawo7itg" path="res://sprite/potionplaceholder.png" id="1_2o3yk"]
 [ext_resource type="Script" path="res://nodes/flask.gd" id="1_pwe5m"]
+[ext_resource type="Texture2D" uid="uid://bgdoxa4gngabl" path="res://sprite/Flask_base_1.png" id="2_glejm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssi78"]
 radius = 60.0
@@ -18,7 +18,9 @@ script = ExtResource("1_pwe5m")
 shape = SubResource("CapsuleShape2D_ssi78")
 
 [node name="Potionplaceholder" type="Sprite2D" parent="."]
-texture = ExtResource("1_2o3yk")
+position = Vector2(9.53674e-07, 9.53674e-07)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_glejm")
 
 [node name="CheckCustomer" type="Area2D" parent="."]
 
