@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb4jjnfm2e3oh"]
+
+[ext_resource type="Texture2D" uid="uid://borda2wef3par" path="res://sprite/custosprite.png" id="1_neldo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c882v"]
+radius = 60.0
+height = 240.0
+
+[node name="Customer" type="CharacterBody2D"]
+
+[node name="Custosprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_neldo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_c882v")
