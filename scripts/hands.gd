@@ -5,7 +5,7 @@ const JUMP_VELOCITY = -400.0
 var canShoot = true
 var picking = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 
 	var direction = get_local_mouse_position().normalized().x
 	if direction:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvdhqc4pvjmuj"]
 
-[ext_resource type="Script" path="res://nodes/flask_spawn.gd" id="1_tq6lp"]
+[ext_resource type="Script" path="res://flask_spawn.gd" id="1_tq6lp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_da3yp"]
 size = Vector2(1920, 120)

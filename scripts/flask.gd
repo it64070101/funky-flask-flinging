@@ -10,7 +10,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	print(Gbl.flask[2])
 	if (position.y <= -10):
 		queue_free()
