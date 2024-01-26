@@ -1,2 +1,3 @@
 # funky-flask-flinging
-A game for Global Game Jam Chiang Mai
+A game for Global Game Jam Chiang Mai v1
+
