@@ -39,6 +39,7 @@ func _input(event):
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
 			position.y = 660
 			get_parent().get_node("Camera").position.y = 540
+
 func try_await():
 	canShoot = false
 	await get_tree().create_timer(2.5).timeout
