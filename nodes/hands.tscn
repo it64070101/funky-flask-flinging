@@ -1,19 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://lov0d6famlhl"]
+[gd_scene load_steps=5 format=3 uid="uid://lov0d6famlhl"]
 
 [ext_resource type="Script" path="res://scripts/hands.gd" id="1_ne31q"]
 [ext_resource type="Texture2D" uid="uid://df47fxxqu64x4" path="res://resources/sprites/hands.jpg" id="1_qsfwe"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm1ln"]
-size = Vector2(480, 240)
+[sub_resource type="CircleShape2D" id="CircleShape2D_l44ir"]
+radius = 120.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2d5t"]
+size = Vector2(480, 360)
 
 [node name="hands" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_ne31q")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 240)
-shape = SubResource("RectangleShape2D_mm1ln")
 
 [node name="Hands" type="Sprite2D" parent="."]
 position = Vector2(-1.04083e-17, 240)
 scale = Vector2(0.882353, 0.882353)
 texture = ExtResource("1_qsfwe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 240)
+shape = SubResource("CircleShape2D_l44ir")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 240)
+shape = SubResource("RectangleShape2D_w2d5t")
