@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://ceie3x0fh7c8o"]
+[gd_scene load_steps=10 format=3 uid="uid://ceie3x0fh7c8o"]
 
-[ext_resource type="Script" path="res://nodes/flask.gd" id="1_pwe5m"]
-[ext_resource type="Texture2D" uid="uid://bgdoxa4gngabl" path="res://sprite/Flask_base_1.png" id="2_glejm"]
+[ext_resource type="Script" path="res://scripts/flask.gd" id="1_pwe5m"]
+[ext_resource type="Texture2D" uid="uid://bgdoxa4gngabl" path="res://resources/sprites/Flask_base_1.png" id="2_glejm"]
+[ext_resource type="Texture2D" uid="uid://x8eg5c15i1we" path="res://resources/sprites/Flask_base_2.png" id="3_shrfd"]
+[ext_resource type="Texture2D" uid="uid://bvuhv43ywmhbx" path="res://resources/sprites/Flask_base_3.png" id="4_c5b4d"]
+[ext_resource type="Texture2D" uid="uid://daqwk553smpho" path="res://resources/sprites/Flask_base_4.png" id="5_hihtl"]
+[ext_resource type="Texture2D" uid="uid://dg27jrwc1cjbf" path="res://resources/sprites/Flask_base_5.png" id="6_dt7y1"]
+[ext_resource type="Texture2D" uid="uid://cktoqmk0m7as3" path="res://resources/sprites/Flask_base_6.png" id="7_2n6ai"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssi78"]
 radius = 90.0
@@ -13,11 +18,12 @@ radius = 90.0
 [node name="Flask" type="RigidBody2D"]
 gravity_scale = -1.0
 script = ExtResource("1_pwe5m")
+spritelist = [ExtResource("2_glejm"), ExtResource("3_shrfd"), ExtResource("4_c5b4d"), ExtResource("5_hihtl"), ExtResource("6_dt7y1"), ExtResource("7_2n6ai")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ssi78")
 
-[node name="Potionplaceholder" type="Sprite2D" parent="."]
+[node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(1.90735e-06, 1.90735e-06)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_glejm")

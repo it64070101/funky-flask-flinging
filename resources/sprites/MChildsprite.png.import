@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj1qkf62qqhpm"
-path="res://.godot/imported/Flask_base.png-b68648e256b08d0ba1ef01d454a74734.ctex"
+uid="uid://twc10xcyjpjm"
+path="res://.godot/imported/MChildsprite.png-4815db1b28540caec17c55d85ffd4f17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/Flask_base.png"
-dest_files=["res://.godot/imported/Flask_base.png-b68648e256b08d0ba1ef01d454a74734.ctex"]
+source_file="res://resources/sprites/MChildsprite.png"
+dest_files=["res://.godot/imported/MChildsprite.png-4815db1b28540caec17c55d85ffd4f17.ctex"]
 
 [params]
 
