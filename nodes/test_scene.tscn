@@ -25,6 +25,14 @@ position = Vector2(960, 1140)
 [node name="Ground2" parent="." instance=ExtResource("4_06gjw")]
 position = Vector2(960, 2220)
 
+[node name="Ground3" parent="." instance=ExtResource("4_06gjw")]
+position = Vector2(1980, 2160)
+rotation = 1.57079
+
+[node name="Ground4" parent="." instance=ExtResource("4_06gjw")]
+position = Vector2(-60, 2160)
+rotation = 1.57079
+
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 
