@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cghi5cl21ippl"]
+[gd_scene load_steps=3 format=3 uid="uid://cghi5cl21ippl"]
 
 [ext_resource type="Texture2D" uid="uid://d207ot72a531x" path="res://resources/backgrounds/josh.jpg" id="1_e71sy"]
+[ext_resource type="Texture2D" uid="uid://b4pcbsyp7sda" path="res://icon.svg" id="2_ypdoj"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Josh" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
+position = Vector2(-960, 480)
 scale = Vector2(1.6, 1.35)
 texture = ExtResource("1_e71sy")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(960, 900)
+scale = Vector2(15, 2.8125)
+texture = ExtResource("2_ypdoj")
