@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cghi5cl21ippl"]
+
+[ext_resource type="PackedScene" uid="uid://lov0d6famlhl" path="res://nodes/hands.tscn" id="2_u7ov0"]
+[ext_resource type="Texture2D" uid="uid://b4pcbsyp7sda" path="res://icon.svg" id="2_ypdoj"]
+[ext_resource type="PackedScene" uid="uid://cb4jjnfm2e3oh" path="res://nodes/customer.tscn" id="3_26pvg"]
+[ext_resource type="PackedScene" uid="uid://lykoy64w8kq8" path="res://nodes/ingredient.tscn" id="4_j4srf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8qmh"]
+size = Vector2(1920, 441)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(960, 900)
+scale = Vector2(15, 2.8125)
+texture = ExtResource("2_ypdoj")
+
+[node name="hands" parent="." instance=ExtResource("2_u7ov0")]
+position = Vector2(960, 660)
+
+[node name="Customer" parent="." instance=ExtResource("3_26pvg")]
+position = Vector2(960, 240)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="Ground Collision" type="CollisionShape2D" parent="Ground"]
+position = Vector2(960, 1301)
+shape = SubResource("RectangleShape2D_u8qmh")
+
+[node name="ingredient" parent="." instance=ExtResource("4_j4srf")]
+position = Vector2(480, 420)
+
+[node name="ingredient2" parent="." instance=ExtResource("4_j4srf")]
+position = Vector2(960, 420)
+
+[node name="ingredient3" parent="." instance=ExtResource("4_j4srf")]
+position = Vector2(1440, 420)
+rotation = 0.00260777

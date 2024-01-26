@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,10 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (position.y <= -10):
-		queue_free()
-
-
-func _on_check_customer_body_entered(body):
-	if (body.name == "Customer"):
-		self.queue_free()
+	pass
