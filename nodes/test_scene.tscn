@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cghi5cl21ippl"]
+[gd_scene load_steps=5 format=3 uid="uid://cghi5cl21ippl"]
 
 [ext_resource type="PackedScene" uid="uid://lov0d6famlhl" path="res://nodes/hands.tscn" id="2_u7ov0"]
 [ext_resource type="Texture2D" uid="uid://b4pcbsyp7sda" path="res://icon.svg" id="2_ypdoj"]
 [ext_resource type="PackedScene" uid="uid://cb4jjnfm2e3oh" path="res://nodes/customer.tscn" id="3_26pvg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8qmh"]
+size = Vector2(1920, 441)
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,3 +19,9 @@ position = Vector2(960, 660)
 
 [node name="Customer" parent="." instance=ExtResource("3_26pvg")]
 position = Vector2(960, 240)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="Ground Collision" type="CollisionShape2D" parent="Ground"]
+position = Vector2(960, 1301)
+shape = SubResource("RectangleShape2D_u8qmh")
