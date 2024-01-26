@@ -32,3 +32,9 @@ func _input(event):
 			var flask = load("res://nodes/flask.tscn").instantiate()
 			get_parent().add_child(flask)
 			flask.position = position
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
+			position.y = 1740
+			get_parent().get_node("Camera").position.y = 1620
+		elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
+			position.y = 660
+			get_parent().get_node("Camera").position.y = 540

@@ -25,3 +25,6 @@ position = Vector2(960, 240)
 [node name="Ground Collision" type="CollisionShape2D" parent="Ground"]
 position = Vector2(960, 1301)
 shape = SubResource("RectangleShape2D_u8qmh")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(960, 540)
