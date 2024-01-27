@@ -20,14 +20,13 @@ func _physics_process(_delta):
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and haveFlask:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and flaskBody:
 			#var flask = load("res://nodes/flask.tscn").instantiate()
-			#get_parent().add_child(flask)
+			get_parent().add_child(flaskBody)
+			flaskBody.shooting()
 			#flask.set_random_flask()
-			haveFlask = false
-			#flaskBody.position = position
 			await try_await()
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody:
 			flaskBody.get_parent().remove_child(flaskBody)
 			add_child(flaskBody)
 			flaskBody.global_position = global_position

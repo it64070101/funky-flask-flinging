@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cghi5cl21ippl"]
+[gd_scene load_steps=6 format=3 uid="uid://cghi5cl21ippl"]
 
 [ext_resource type="PackedScene" uid="uid://lov0d6famlhl" path="res://nodes/hands.tscn" id="2_u7ov0"]
 [ext_resource type="Texture2D" uid="uid://b4pcbsyp7sda" path="res://icon.svg" id="2_ypdoj"]
-[ext_resource type="PackedScene" uid="uid://cb4jjnfm2e3oh" path="res://nodes/customer.tscn" id="3_26pvg"]
 [ext_resource type="PackedScene" uid="uid://b247a6ie7d145" path="res://nodes/ground.tscn" id="4_06gjw"]
 [ext_resource type="PackedScene" uid="uid://dvdhqc4pvjmuj" path="res://nodes/flask_spawn.tscn" id="5_t3jhv"]
 [ext_resource type="PackedScene" uid="uid://bvypfaho063e2" path="res://nodes/customer_spawn.tscn" id="6_y78fq"]
@@ -16,9 +15,6 @@ texture = ExtResource("2_ypdoj")
 
 [node name="hands" parent="." instance=ExtResource("2_u7ov0")]
 position = Vector2(960, 660)
-
-[node name="Customer" parent="." instance=ExtResource("3_26pvg")]
-position = Vector2(968, 144)
 
 [node name="Ground" parent="." instance=ExtResource("4_06gjw")]
 position = Vector2(960, 1140)

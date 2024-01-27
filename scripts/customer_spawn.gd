@@ -13,7 +13,7 @@ func _process(delta):
 		rng.randomize()
 		var customer = load("res://nodes/customer.tscn").instantiate()
 		add_child(customer)
-		customer.position.x = 1920
+		customer.position.x = 2000
 		customer.position.y = rng.randi_range(144, 576)
 		cooldown = 0
 	pass
