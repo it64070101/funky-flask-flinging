@@ -9,6 +9,8 @@ var isShoot
 # Called when the node enters the scene tree for the first time.
 var random_number
 
+var smoke = preload("res://resources/SFX/smokes.tscn")
+
 func _ready():
 	#$sprite.set_texture(spritelist[0])
 	isInHand = false
@@ -29,11 +31,17 @@ func _on_check_customer_body_entered(body):
 		if(body.getWantFlask() == tag):
 			print("yes")
 			Gbl.lockShoot = false
+			
 			body.queue_free()
 			self.queue_free()
 		else:
 			print("No")
 			Gbl.lockShoot = false
+			var smokePlayer = smoke.instantiate()
+			self.get_parent().add_child(smokePlayer)
+			print(smokePlayer.get_parent())
+			smokePlayer.global_position = body.global_position
+			smokePlayer.playSmoke()
 			body.queue_free()
 			self.queue_free()
 
