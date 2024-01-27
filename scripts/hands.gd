@@ -19,27 +19,28 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and flaskBody:
-			#var flask = load("res://nodes/flask.tscn").instantiate()
-			get_parent().add_child(flaskBody)
-			flaskBody.shooting()
-			#flask.set_random_flask()
-			await try_await()
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody:
-			flaskBody.get_parent().remove_child(flaskBody)
-			add_child(flaskBody)
-			flaskBody.global_position = global_position
-			flaskBody.inHand()
-			print(flaskBody.position, position)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
-			picking = true
-			position.y = 1740
-			get_parent().get_node("Camera").position.y = 1620
-		elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
-			picking = false
-			position.y = 660
-			get_parent().get_node("Camera").position.y = 540
+	if Gbl.gameStart:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and flaskBody:
+				#var flask = load("res://nodes/flask.tscn").instantiate()
+				get_parent().add_child(flaskBody)
+				flaskBody.shooting()
+				#flask.set_random_flask()
+				await try_await()
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody:
+				flaskBody.get_parent().remove_child(flaskBody)
+				add_child(flaskBody)
+				flaskBody.global_position = global_position
+				flaskBody.inHand()
+				print(flaskBody.position, position)
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
+				picking = true
+				position.y = 1740
+				get_parent().get_node("Camera").position.y = 1620
+			elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
+				picking = false
+				position.y = 660
+				get_parent().get_node("Camera").position.y = 540
 
 func try_await():
 	canShoot = false
