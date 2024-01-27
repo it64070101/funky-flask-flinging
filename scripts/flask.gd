@@ -47,3 +47,4 @@ func shooting():
 	global_position = get_parent().global_position
 	set_gravity_scale(-1)
 	set_collision_layer(1)
+	print(get_parent().name, self.name)
