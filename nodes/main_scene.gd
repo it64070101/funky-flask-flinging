@@ -20,8 +20,8 @@ func _process(_delta):
 func addFlaskStore():
 	flaskStore += 1
 	#print(flaskStore)
-	$Flaskstore.set_text("Flask Store: "+str(flaskStore)+"/60")
-	if flaskStore >= 60:
+	$Flaskstore.set_text("Flask Store: "+str(flaskStore)+"/30")
+	if flaskStore >= 30:
 		$Camera/Control.gameOverScreen()
 		Gbl.gameStart = false
 
