@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb4jjnfm2e3oh"]
+[gd_scene load_steps=12 format=3 uid="uid://cb4jjnfm2e3oh"]
 
 [ext_resource type="Script" path="res://scripts/customer.gd" id="1_7ixep"]
-[ext_resource type="Texture2D" uid="uid://borda2wef3par" path="res://sprite/custosprite.png" id="1_neldo"]
+[ext_resource type="Texture2D" path="res://sprite/custosprite.png" id="1_neldo"]
+[ext_resource type="Texture2D" uid="uid://vvletf7vqkor" path="res://resources/sprites/FChildsprite.png" id="2_3tpr2"]
+[ext_resource type="Texture2D" uid="uid://b7wv42jg2pia" path="res://resources/sprites/FGBendSprite.png" id="3_okubb"]
+[ext_resource type="Texture2D" uid="uid://dyfxxqm08rudt" path="res://resources/sprites/FOldsprite.png" id="4_u5gam"]
+[ext_resource type="Texture2D" uid="uid://dfdsso6o6qo45" path="res://resources/sprites/Fsprite.png" id="5_4pdol"]
+[ext_resource type="Texture2D" uid="uid://twc10xcyjpjm" path="res://resources/sprites/MChildsprite.png" id="6_wmn4m"]
+[ext_resource type="Texture2D" uid="uid://cog7nysx6yei0" path="res://resources/sprites/MGBendSprite.png" id="7_8dajf"]
+[ext_resource type="Texture2D" uid="uid://dmcd28j1e61nm" path="res://resources/sprites/MOldSprite.png" id="8_3xpms"]
+[ext_resource type="Texture2D" uid="uid://ckwcjaj5jdu80" path="res://resources/sprites/Msprite.png" id="9_ybjoa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c882v"]
 radius = 60.0
@@ -9,6 +17,7 @@ height = 240.0
 
 [node name="Customer" type="CharacterBody2D"]
 script = ExtResource("1_7ixep")
+customerSpriteList = [ExtResource("2_3tpr2"), ExtResource("3_okubb"), ExtResource("4_u5gam"), ExtResource("5_4pdol"), ExtResource("6_wmn4m"), ExtResource("7_8dajf"), ExtResource("8_3xpms"), ExtResource("9_ybjoa")]
 
 [node name="Custosprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_neldo")

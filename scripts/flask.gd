@@ -35,7 +35,6 @@ func _on_check_customer_body_entered(body):
 			Gbl.lockShoot = false
 			body.queue_free()
 			self.queue_free()
-		
 
 func set_random_flask():
 	random_number = int(Gbl.rng.randf_range(0, 6.0))

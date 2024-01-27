@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var customerSpriteList = []
+
 var speed
 var minSpeed = 200.0
 var maxSpeed = 300.0
@@ -10,6 +12,7 @@ func _ready():
 	rng.randomize()
 	speed = rng.randf_range(minSpeed, maxSpeed)
 	wantFlask = rng.randi_range(0, 5)
+	$Custosprite.set_texture(customerSpriteList[rng.randi_range(0, 7)])
 	add_to_group("customer")
 	pass
 
