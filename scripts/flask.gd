@@ -13,8 +13,15 @@ func _process(_delta):
 
 func _on_check_customer_body_entered(body):
 	if (body.is_in_group("customer")):
-		body.queue_free()
-		self.queue_free()
+		if(body.getWantFlask() == random_number):
+			print("yes")
+			body.queue_free()
+			self.queue_free()
+		else:
+			print("No")
+			body.queue_free()
+			self.queue_free()
+		
 
 func set_random_flask():
 	random_number = int(Gbl.rng.randf_range(0, 6.0))
