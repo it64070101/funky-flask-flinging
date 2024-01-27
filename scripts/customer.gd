@@ -30,3 +30,9 @@ func _physics_process(_delta):
 
 func getWantFlask():
 	return Gbl.flask[wantFlask]
+	
+func customerDying():
+	speed = 0
+	$CollisionShape2D.queue_free()
+	await get_tree().create_timer(2).timeout
+	self.queue_free()

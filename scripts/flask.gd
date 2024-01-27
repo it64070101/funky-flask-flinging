@@ -42,7 +42,7 @@ func _on_check_customer_body_entered(body):
 			print(smokePlayer.get_parent())
 			smokePlayer.global_position = body.global_position
 			smokePlayer.playSmoke()
-			body.queue_free()
+			body.customerDying()
 			self.queue_free()
 
 func set_random_flask():

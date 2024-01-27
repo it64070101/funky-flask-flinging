@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cb4jjnfm2e3oh"]
+[gd_scene load_steps=11 format=3 uid="uid://cb4jjnfm2e3oh"]
 
 [ext_resource type="Script" path="res://scripts/customer.gd" id="1_7ixep"]
-[ext_resource type="Texture2D" path="res://sprite/custosprite.png" id="1_neldo"]
 [ext_resource type="Texture2D" uid="uid://vvletf7vqkor" path="res://resources/sprites/FChildsprite.png" id="2_3tpr2"]
 [ext_resource type="Texture2D" uid="uid://b7wv42jg2pia" path="res://resources/sprites/FGBendSprite.png" id="3_okubb"]
 [ext_resource type="Texture2D" uid="uid://dyfxxqm08rudt" path="res://resources/sprites/FOldsprite.png" id="4_u5gam"]
@@ -20,7 +19,6 @@ script = ExtResource("1_7ixep")
 customerSpriteList = [ExtResource("2_3tpr2"), ExtResource("3_okubb"), ExtResource("4_u5gam"), ExtResource("5_4pdol"), ExtResource("6_wmn4m"), ExtResource("7_8dajf"), ExtResource("8_3xpms"), ExtResource("9_ybjoa")]
 
 [node name="Custosprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_neldo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_c882v")
