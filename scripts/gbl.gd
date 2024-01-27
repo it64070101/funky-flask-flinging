@@ -18,5 +18,5 @@ func addCombo():
 
 func addFlaskStore():
 	flaskStore += 1
-	if flaskStore >= 5:
+	if flaskStore >= 50:
 		get_tree().change_scene_to_file("res://nodes/game_over.tscn")
