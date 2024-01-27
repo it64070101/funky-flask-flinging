@@ -7,9 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dvdhqc4pvjmuj" path="res://nodes/flask_spawn.tscn" id="5_t3jhv"]
 [ext_resource type="Script" path="res://scripts/interface.gd" id="6_2pgip"]
 [ext_resource type="PackedScene" uid="uid://bvypfaho063e2" path="res://nodes/customer_spawn.tscn" id="6_y78fq"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_7r16n"]
-font_size = 128
+[ext_resource type="Texture2D" uid="uid://bolqoot03rbet" path="res://sprite/GameOverCard.png" id="8_1ee42"]
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_g2kx1")
@@ -55,15 +53,11 @@ offset_right = 960.0
 offset_bottom = 540.0
 script = ExtResource("6_2pgip")
 
-[node name="Game Over" type="Label" parent="Camera/Control"]
+[node name="Game Over" type="TextureRect" parent="Camera/Control"]
 visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Gay Over"
-label_settings = SubResource("LabelSettings_7r16n")
-horizontal_alignment = 1
-vertical_alignment = 1
+layout_mode = 0
+offset_left = 240.0
+offset_top = 240.0
+offset_right = 1680.0
+offset_bottom = 780.0
+texture = ExtResource("8_1ee42")
