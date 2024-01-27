@@ -47,6 +47,7 @@ func _on_check_customer_body_entered(body):
 		elif(tag == "DeAge"):
 			pass #customer old -> adult, adult -> young, young -> empty
 		if(body.getWantFlask() == tag):
+			get_parent().addMoney()
 			Gbl.lockShoot = false
 			body.customerDying()
 			self.queue_free()

@@ -20,6 +20,7 @@ func _process(_delta):
 func addFlaskStore():
 	flaskStore += 1
 	#print(flaskStore)
+	$Flaskstore.set_text("Flask Store: "+str(flaskStore)+"/60")
 	if flaskStore >= 60:
 		$Camera/Control.gameOverScreen()
 		Gbl.gameStart = false
@@ -32,7 +33,14 @@ func addStress():
 	if stress >= 3:
 		$Camera/Control.gameOverScreen()
 		Gbl.gameStart = false
+	Gbl.stress += 1
+	$Camera/Control/Stress.set_text("Stress "+str(Gbl.stress)+"/3")
 
 func increasing(delta):
 	Gbl.increasingTime += delta
 	return int(Gbl.increasingTime/60)
+
+func addMoney():
+	Gbl.money += 1
+	$Camera/Control/Money.set_text("$"+str(Gbl.money))
+	
