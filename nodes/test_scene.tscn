@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cghi5cl21ippl"]
+[gd_scene load_steps=15 format=3 uid="uid://cghi5cl21ippl"]
 
 [ext_resource type="Script" path="res://nodes/main_scene.gd" id="1_g2kx1"]
 [ext_resource type="Texture2D" uid="uid://dbqrkxp7xqcif" path="res://resources/sprites/gameBG.png" id="2_gatwj"]
@@ -10,20 +10,33 @@
 [ext_resource type="Texture2D" uid="uid://bolqoot03rbet" path="res://sprite/GameOverCard.png" id="8_1ee42"]
 [ext_resource type="AudioStream" uid="uid://dojeksf8n7p3t" path="res://resources/Audio/mainTheme_Chinese_Blues_Moore_and_Gardner.mp3" id="9_w6u3m"]
 [ext_resource type="FontFile" uid="uid://b8k5brwvy6lk3" path="res://resources/Menu/Pattaya-Regular.ttf" id="10_hpo4v"]
+[ext_resource type="Texture2D" uid="uid://dylp58o5j27b3" path="res://resources/sprites/Card.png" id="11_kl2ps"]
 
 [sub_resource type="Animation" id="Animation_5ijba"]
 resource_name = "flashred"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/path = NodePath("../../Card:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.6, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Card:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1e-05, 1e-05, 1.1487e-05, 1e-05, 1.81459e-05, 1e-05, 1e-05, 4.9576e-05, 1, 1, 1e-05),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(959, 541), Vector2(959, 575), Vector2(959, 543), Vector2(959, 563), Vector2(959, 563), Vector2(959, 515), Vector2(959, 570), Vector2(959, 546), Vector2(959, 541), Vector2(959, 541), Vector2(959, 541)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ggwk3"]
@@ -67,6 +80,12 @@ collision_mask = 7
 position = Vector2(960, 1216)
 
 [node name="Customer_Spawn" parent="." instance=ExtResource("6_y78fq")]
+
+[node name="Card" type="Sprite2D" parent="."]
+visible = false
+z_index = 501
+position = Vector2(959, 541)
+texture = ExtResource("11_kl2ps")
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(960, 540)
@@ -118,13 +137,9 @@ libraries = {
 "": SubResource("AnimationLibrary_ggwk3")
 }
 
-[node name="ColorRect" type="ColorRect" parent="Camera/Control"]
+[node name="spritt" type="Sprite2D" parent="Camera/Control"]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_right = 1922.0
-offset_bottom = 1086.0
-color = Color(1, 0, 0, 0.490196)
-metadata/_edit_lock_ = true
+position = Vector2(964, 608)
 
 [node name="Button2" type="Button" parent="Camera/Control"]
 visible = false
