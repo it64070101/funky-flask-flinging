@@ -10,8 +10,6 @@ var isShoot
 # Called when the node enters the scene tree for the first time.
 var random_number
 
-var smoke = preload("res://resources/SFX/smokes.tscn")
-
 func _ready():
 	#$sprite.set_texture(spritelist[0])
 	isInHand = false
