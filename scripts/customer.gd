@@ -57,15 +57,19 @@ func customerDying():
 	self.queue_free()
 	
 func changeToFrog():
+	$frog.play()
 	$Custosprite.texture = load("res://resources/sprites/frog.png")
 
 func changeToMale():
+	$genderbend.play()
 	$Custosprite.set_texture(customerSpriteList[6])
 
 func changeToFemale():
+	$genderbend.play()
 	$Custosprite.set_texture(customerSpriteList[7])
 	
 func deAge():
+	$deage.play()
 	if (age == "young"):
 		$Custosprite.texture = null
 	elif (age == "adult" && gender == "Female"):
@@ -76,3 +80,8 @@ func deAge():
 		$Custosprite.set_texture(customerSpriteList[2])
 	else:
 		$Custosprite.set_texture(customerSpriteList[5])
+
+func onEffect():
+	$noeff.play()
+func setfly():
+	$fly.play()
