@@ -6,6 +6,12 @@ var money = 0
 var stress = 0
 var combo = 0
 var flaskStore = 0
+var gameStart = false
+var lose
+
+func _ready():
+	gameStart = false
+	lose = false
 
 func addMoney():
 	money += combo
@@ -18,5 +24,6 @@ func addCombo():
 
 func addFlaskStore():
 	flaskStore += 1
-	if flaskStore >= 50:
+	if flaskStore >= 5:
+		#$Control.gameOverScreen()
 		get_tree().change_scene_to_file("res://nodes/game_over.tscn")
