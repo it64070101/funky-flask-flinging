@@ -26,7 +26,7 @@ func _input(event):
 			flaskBody.shooting()
 			#flask.set_random_flask()
 			await try_await()
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody:
+		elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody:
 			flaskBody.get_parent().remove_child(flaskBody)
 			add_child(flaskBody)
 			flaskBody.global_position = global_position
