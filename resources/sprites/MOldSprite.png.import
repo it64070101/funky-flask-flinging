@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blmdac0q0nomu"
-path="res://.godot/imported/EngorgedTick.png-9e97fb35abf5d1fa5d0d18bb3c16f7f9.ctex"
+uid="uid://dmcd28j1e61nm"
+path="res://.godot/imported/MOldSprite.png-5a4d7dc86e81c51558025d3498c0bdaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/vermins/Basic Vermin Animations/Engorged Tick/EngorgedTick.png"
-dest_files=["res://.godot/imported/EngorgedTick.png-9e97fb35abf5d1fa5d0d18bb3c16f7f9.ctex"]
+source_file="res://resources/sprites/MOldSprite.png"
+dest_files=["res://.godot/imported/MOldSprite.png-5a4d7dc86e81c51558025d3498c0bdaf.ctex"]
 
 [params]
 
