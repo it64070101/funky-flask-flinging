@@ -28,17 +28,26 @@ func _process(_delta):
 func _on_check_customer_body_entered(body):
 	if (body.is_in_group("customer")):
 		print(body.getWantFlask(),tag)
-		if(body.getWantFlask() == tag):
-			Gbl.lockShoot = false
-			body.queue_free()
-			self.queue_free()
-		else:
-			Gbl.lockShoot = false
+		if (tag == "Bomb"):
 			var smokePlayer = smoke.instantiate()
 			self.get_parent().add_child(smokePlayer)
 			print(smokePlayer.get_parent())
 			smokePlayer.global_position = body.global_position
 			smokePlayer.playSmoke()
+		elif (tag == "Fly"):
+			pass #make customer fly
+		elif(tag == "Frog"):
+			pass #customer turns to frog
+		elif(tag == "GenderBend"):
+			pass #customer male -> female, female -> male
+		elif(tag == "DeAge"):
+			pass #customer old -> adult, adult -> young, young -> empty
+		if(body.getWantFlask() == tag):
+			Gbl.lockShoot = false
+			body.customerDying()
+			self.queue_free()
+		else:
+			Gbl.lockShoot = false
 			get_parent().anim.play('flashred')
 			body.customerDying()
 			self.queue_free()
