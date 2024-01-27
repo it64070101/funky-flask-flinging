@@ -44,3 +44,7 @@ func addMoney():
 	Gbl.money += 1
 	$Camera/Control/Money.set_text("$"+str(Gbl.money))
 	
+
+
+func _on_button_2_pressed():
+	get_tree().change_scene_to_file("res://nodes/mainMenu.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cghi5cl21ippl"]
+[gd_scene load_steps=14 format=3 uid="uid://cghi5cl21ippl"]
 
 [ext_resource type="Script" path="res://nodes/main_scene.gd" id="1_g2kx1"]
 [ext_resource type="Texture2D" uid="uid://dbqrkxp7xqcif" path="res://resources/sprites/gameBG.png" id="2_gatwj"]
@@ -30,6 +30,10 @@ tracks/0/keys = {
 _data = {
 "flashred": SubResource("Animation_5ijba")
 }
+
+[sub_resource type="Theme" id="Theme_yrjf4"]
+default_font = ExtResource("10_hpo4v")
+default_font_size = 80
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_g2kx1")
@@ -122,9 +126,29 @@ offset_bottom = 1086.0
 color = Color(1, 0, 0, 0.490196)
 metadata/_edit_lock_ = true
 
+[node name="Button2" type="Button" parent="Camera/Control"]
+visible = false
+offset_left = 625.0
+offset_top = 767.0
+offset_right = 1336.0
+offset_bottom = 945.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Camera/Control/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_yrjf4")
+text = "Play Again"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="mainTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_w6u3m")
-volume_db = -7.5
+volume_db = -15.0
 autoplay = true
 
 [node name="Flaskstore" type="Label" parent="."]
@@ -139,3 +163,10 @@ theme_override_fonts/font = ExtResource("10_hpo4v")
 theme_override_font_sizes/font_size = 120
 text = "Flask Store: 00/60"
 horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.01
+one_shot = true
+
+[connection signal="pressed" from="Camera/Control/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="Timer" to="hands" method="_on_timer_timeout"]

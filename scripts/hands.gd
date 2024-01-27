@@ -10,6 +10,12 @@ var flaskBody = null
 var holdingFlask = null
 var shootingFlask = null
 
+var lockScroll = false
+
+func _process(_delta):
+	print("shootflask : " + str(shootingFlask) + "|" + "holdflask : " + str(holdingFlask)+'\n')
+	print(is_instance_valid(holdingFlask))
+
 func _physics_process(_delta):
 
 	var direction = get_local_mouse_position().normalized().x
@@ -24,10 +30,12 @@ func _input(event):
 
 	if Gbl.gameStart:
 		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and flaskBody and not(Gbl.lockShoot):
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and flaskBody and not(Gbl.lockShoot) and is_instance_valid(holdingFlask):
 				shootingFlask = load("res://nodes/flask.tscn").instantiate()
 				get_parent().add_child(shootingFlask)
 				shootingFlask.position = position
+				print(shootingFlask.tag)
+				print(holdingFlask.tag)
 				shootingFlask.tag = holdingFlask.tag
 				shootingFlask.changeTexture(holdingFlask.tag)
 				holdingFlask.queue_free()
@@ -36,8 +44,9 @@ func _input(event):
 				holdingFlask = null
 				$shoot.play()
 				await try_await()
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody and not(holdingFlask):
+			elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody and is_instance_valid(flaskBody):
 				holdingFlask = load("res://nodes/flask.tscn").instantiate()
+				holdingFlask.gravity_scale = 0
 				add_child(holdingFlask)
 				holdingFlask.global_position = global_position
 				holdingFlask.tag = flaskBody.tag
@@ -46,11 +55,15 @@ func _input(event):
 				flaskBody.queue_free()
 				$cilck.play()
 				get_parent().deleteFlaskStore()
-			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed and not(Gbl.lockShoot):
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed and not(Gbl.lockShoot) and !lockScroll:
+				lockScroll = true
+				$"../Timer".start()
 				picking = true
 				position.y = 1740
 				get_parent().get_node("Camera").position.y = 1620
-			elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed and not(Gbl.lockShoot):
+			elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed and not(Gbl.lockShoot) and !lockScroll:
+				lockScroll = true
+				$"../Timer".start()
 				picking = false
 				position.y = 660
 				get_parent().get_node("Camera").position.y = 540
@@ -65,3 +78,7 @@ func _on_area_2d_body_entered(body):
 	#self.get_parent().add_child(body)
 	
 	#add_child(body)
+
+
+func _on_timer_timeout():
+	lockScroll = false
