@@ -39,13 +39,16 @@ func _on_check_customer_body_entered(body):
 			smokePlayer.global_position = body.global_position
 			smokePlayer.playSmoke()
 		elif (tag == "Fly"):
-			pass #make customer fly
+			body.gravity = -5000
 		elif(tag == "Frog"):
-			pass #customer turns to frog
+			body.changeToFrog()
 		elif(tag == "GenderBend"):
-			pass #customer male -> female, female -> male
+			if(body.gender == "Female"):
+				body.changeToMale()
+			else:
+				body.changeToFemale()
 		elif(tag == "DeAge"):
-			pass #customer old -> adult, adult -> young, young -> empty
+			body.deAge()
 		if(body.getWantFlask() == tag):
 			get_parent().addMoney()
 			Gbl.lockShoot = false
