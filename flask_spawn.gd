@@ -17,6 +17,9 @@ func _process(delta):
 		add_child(flask)
 		flask.position.x = rng.randi_range(-960, 960)
 		cooldown = 0
+		Gbl.randomflask = int(rng.randf_range(0, 6.0))
+		
+		
 	pass
 	
 func spawn():
