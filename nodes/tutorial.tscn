@@ -94,7 +94,7 @@ text = "[b]Business Objective:[/b]
   - Prescribe \"medicine\" to as many pedestrain as you can
   - Your stress increase for each misprescribed flask.
   - When stress level reached 3,  you succumbed to the bagage of life and die.
-  - If you have too many unsold inventory (60), your bussiness is probably failing, also you die, too.
+  - If you have too many unsold inventory (30), your bussiness is probably failing, also you die, too.
 
 [b]Work Procedure:[/b]
   - Your shop have two sections, navigate between them using [color=Gold  ][i]scrollwheel[/i][/color].
