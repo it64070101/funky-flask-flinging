@@ -1,11 +1,19 @@
 extends Node2D
 
+var cooldown = 0
+var second = 2
+var rng = RandomNumberGenerator.new()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	cooldown += delta
+	if(cooldown >= second):
+		rng.randomize()
+		var customer = load("res://nodes/customer.tscn").instantiate()
+		add_child(customer)
+		customer.position.x = 1920
+		customer.position.y = rng.randi_range(144, 576)
+		cooldown = 0
 	pass
