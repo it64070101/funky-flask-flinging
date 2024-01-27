@@ -10,7 +10,7 @@ var isShoot
 var random_number
 
 func _ready():
-	$sprite.set_texture(spritelist[0])
+	#$sprite.set_texture(spritelist[0])
 	isInHand = false
 	isShoot = false
 	tag = ""
@@ -25,7 +25,8 @@ func _process(_delta):
 
 func _on_check_customer_body_entered(body):
 	if (body.is_in_group("customer")):
-		if(body.getWantFlask() == random_number):
+		print(body.getWantFlask(),tag)
+		if(body.getWantFlask() == tag):
 			print("yes")
 			Gbl.lockShoot = false
 			body.queue_free()
@@ -38,20 +39,17 @@ func _on_check_customer_body_entered(body):
 		
 
 func set_random_flask():
-	random_number = int(Gbl.rng.randf_range(0, 6.0))
+	random_number = Gbl.rng.randi_range(0, 5)
 	$sprite.set_texture(spritelist[random_number])
 	name = Gbl.flask[random_number]
 	tag = Gbl.flask[random_number]
 
-func inHand():
+func inHand(testtag):
+	changeTexture(testtag)
 	isInHand = true
 	set_collision_layer(2)
 	#set_collision_mask(2)
 
-func shooting():
-	print('shoot')
-	isInHand = false
-	global_position = get_parent().global_position
-	set_gravity_scale(-1)
-	set_collision_layer(1)
-	print(get_parent().name, self.name)
+func changeTexture(nameTexture):
+	$sprite.set_texture(spritelist[Gbl.flask.find(nameTexture)])
+

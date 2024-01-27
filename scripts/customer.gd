@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed
 var minSpeed = 200.0
-var maxSpeed = 300.0
+var maxSpeed = 200.0
 var wantFlask
 var rng = RandomNumberGenerator.new()
 
@@ -11,6 +11,7 @@ func _ready():
 	speed = rng.randf_range(minSpeed, maxSpeed)
 	wantFlask = rng.randi_range(0, 5)
 	add_to_group("customer")
+	$Control/Label.set_text(Gbl.flask[wantFlask])
 	pass
 
 func _physics_process(_delta):
@@ -25,4 +26,4 @@ func _physics_process(_delta):
 		queue_free()
 
 func getWantFlask():
-	return wantFlask
+	return Gbl.flask[wantFlask]

@@ -27,9 +27,10 @@ func _input(event):
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and flaskBody and not(Gbl.lockShoot):
 				shootingFlask = load("res://nodes/flask.tscn").instantiate()
-				shootingFlask.tag = holdingFlask.tag
 				get_parent().add_child(shootingFlask)
 				shootingFlask.position = position
+				shootingFlask.tag = holdingFlask.tag
+				shootingFlask.changeTexture(holdingFlask.tag)
 				holdingFlask.queue_free()
 				#flaskBody.shooting()
 				Gbl.lockShoot = true
@@ -38,10 +39,11 @@ func _input(event):
 				await try_await()
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody and not(holdingFlask):
 				holdingFlask = load("res://nodes/flask.tscn").instantiate()
-				holdingFlask.tag = flaskBody.tag
 				add_child(holdingFlask)
 				holdingFlask.global_position = global_position
-				holdingFlask.inHand()
+				holdingFlask.tag = flaskBody.tag
+				holdingFlask.inHand(holdingFlask.tag)
+				flaskBody.changeTexture(holdingFlask.tag)
 				flaskBody.queue_free()
 				#print(flaskBody.position, position)
 			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed and not(Gbl.lockShoot):
