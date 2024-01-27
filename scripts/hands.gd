@@ -6,6 +6,8 @@ var canShoot = true
 var picking = false
 var haveFlask = true
 
+var flaskBody = null
+
 func _physics_process(_delta):
 
 	var direction = get_local_mouse_position().normalized().x
@@ -19,15 +21,18 @@ func _physics_process(_delta):
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and haveFlask:
-			var flask = load("res://nodes/flask.tscn").instantiate()
-			get_parent().add_child(flask)
-			# set diff flask
-			flask.set_random_flask()
+			#var flask = load("res://nodes/flask.tscn").instantiate()
+			#get_parent().add_child(flask)
+			#flask.set_random_flask()
 			haveFlask = false
-			flask.position = position
+			#flaskBody.position = position
 			await try_await()
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking:
-			print(123)
+			flaskBody.get_parent().remove_child(flaskBody)
+			add_child(flaskBody)
+			flaskBody.global_position = global_position
+			flaskBody.inHand()
+			print(flaskBody.position, position)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
 			picking = true
 			position.y = 1740
@@ -44,8 +49,7 @@ func try_await():
 
 
 func _on_area_2d_body_entered(body):
-	print(body.get_parent())
-	#body.get_parent().remove_child(body)
+	flaskBody = body
 	#self.get_parent().add_child(body)
 	
 	#add_child(body)
