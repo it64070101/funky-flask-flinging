@@ -1,7 +1,7 @@
 extends Node2D
 
 var cooldown = 0
-var second = 2
+var second = 6
 var rng = RandomNumberGenerator.new()
 
 func _ready():
