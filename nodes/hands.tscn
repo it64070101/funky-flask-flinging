@@ -15,6 +15,7 @@ collision_mask = 2
 script = ExtResource("1_ne31q")
 
 [node name="Hands" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.498039)
 position = Vector2(-1.04083e-17, 240)
 scale = Vector2(0.882353, 0.882353)
 texture = ExtResource("1_qsfwe")
