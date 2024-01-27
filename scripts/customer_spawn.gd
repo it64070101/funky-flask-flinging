@@ -15,5 +15,5 @@ func _process(delta):
 			var customer = load("res://nodes/customer.tscn").instantiate()
 			add_child(customer)
 			customer.position.x = 2000
-			customer.position.y = rng.randi_range(144, 576)
+			customer.position.y = rng.randi_range(272, 550)
 			cooldown = 0
