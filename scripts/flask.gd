@@ -20,5 +20,3 @@ func _on_check_customer_body_entered(body):
 func set_random_flask():
 	var random_number = int(Gbl.rng.randf_range(0, 6.0))
 	$sprite.set_texture(spritelist[random_number])
-	name = "1"+str(1)
-	print(random_number)

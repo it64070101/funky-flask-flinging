@@ -4,6 +4,7 @@ const SPEED = 1000.0
 const JUMP_VELOCITY = -400.0
 var canShoot = true
 var picking = false
+var haveFlask = true
 
 func _physics_process(_delta):
 
@@ -17,11 +18,16 @@ func _physics_process(_delta):
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking):
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and canShoot and not(picking) and haveFlask:
 			var flask = load("res://nodes/flask.tscn").instantiate()
 			get_parent().add_child(flask)
+			# set diff flask
+			flask.set_random_flask()
+			haveFlask = false
 			flask.position = position
 			await try_await()
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking:
+			print(123)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
 			picking = true
 			position.y = 1740
