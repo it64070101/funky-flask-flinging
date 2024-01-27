@@ -19,8 +19,4 @@ func _process(delta):
 		Gbl.randomflask = int(rng.randf_range(0, 6.0))
 		flask.set_random_flask()
 		Gbl.addFlaskStore()
-		remove_child(flask)
-		self.get_parent().add_child(flask)
-		print(flask.get_parent())
-		
-	pass
+    
