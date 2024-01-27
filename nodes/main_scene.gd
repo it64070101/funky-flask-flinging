@@ -8,6 +8,7 @@ var stress
 func _ready():
 	flaskStore = 0
 	stress = 0
+	Gbl.stress = 0
 	Gbl.gameStart = true
 	Gbl.increasingTime = 0
 	pass # Replace with function body.
