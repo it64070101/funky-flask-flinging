@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://nodes/main_scene.gd" id="1_g2kx1"]
 [ext_resource type="PackedScene" uid="uid://lov0d6famlhl" path="res://nodes/hands.tscn" id="2_u7ov0"]
 [ext_resource type="Texture2D" uid="uid://b4pcbsyp7sda" path="res://icon.svg" id="2_ypdoj"]
-[ext_resource type="PackedScene" path="res://nodes/ground.tscn" id="4_06gjw"]
+[ext_resource type="PackedScene" uid="uid://b247a6ie7d145" path="res://nodes/ground.tscn" id="4_06gjw"]
 [ext_resource type="PackedScene" uid="uid://dvdhqc4pvjmuj" path="res://nodes/flask_spawn.tscn" id="5_t3jhv"]
 [ext_resource type="Script" path="res://scripts/interface.gd" id="6_2pgip"]
 [ext_resource type="PackedScene" uid="uid://bvypfaho063e2" path="res://nodes/customer_spawn.tscn" id="6_y78fq"]
@@ -37,11 +37,6 @@ position = Vector2(-60, 1680)
 rotation = 1.57079
 collision_mask = 3
 
-[node name="Flask Spawn" parent="." instance=ExtResource("5_t3jhv")]
-position = Vector2(960, 1216)
-
-[node name="Customer_Spawn" parent="." instance=ExtResource("6_y78fq")]
-
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 position_smoothing_enabled = true
@@ -67,3 +62,8 @@ text = "Gay Over"
 label_settings = SubResource("LabelSettings_7r16n")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Flask Spawn" parent="." instance=ExtResource("5_t3jhv")]
+position = Vector2(960, 1216)
+
+[node name="Customer_Spawn" parent="." instance=ExtResource("6_y78fq")]
