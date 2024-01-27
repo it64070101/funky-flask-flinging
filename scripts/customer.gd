@@ -23,3 +23,6 @@ func _physics_process(_delta):
 	move_and_slide()
 	if (position.x < 0):
 		queue_free()
+
+func getWantFlask():
+	return wantFlask
