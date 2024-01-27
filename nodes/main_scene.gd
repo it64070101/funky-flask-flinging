@@ -2,6 +2,7 @@ extends Node2D
 
 var flaskStore
 var stress
+@onready var anim = $Camera/Control/AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

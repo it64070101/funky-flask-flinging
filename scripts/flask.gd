@@ -39,6 +39,7 @@ func _on_check_customer_body_entered(body):
 			print(smokePlayer.get_parent())
 			smokePlayer.global_position = body.global_position
 			smokePlayer.playSmoke()
+			get_parent().anim.play('flashred')
 			body.customerDying()
 			self.queue_free()
 			get_parent().addStress()
