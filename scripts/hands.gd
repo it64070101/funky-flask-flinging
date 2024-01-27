@@ -34,6 +34,7 @@ func _input(event):
 				Gbl.lockShoot = true
 				flaskBody = null
 				holdingFlask = null
+				$shoot.play()
 				await try_await()
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking and flaskBody and not(holdingFlask):
 				holdingFlask = load("res://nodes/flask.tscn").instantiate()
@@ -43,6 +44,7 @@ func _input(event):
 				holdingFlask.inHand(holdingFlask.tag)
 				flaskBody.changeTexture(holdingFlask.tag)
 				flaskBody.queue_free()
+				$cilck.play()
 				get_parent().deleteFlaskStore()
 			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed and not(Gbl.lockShoot):
 				picking = true

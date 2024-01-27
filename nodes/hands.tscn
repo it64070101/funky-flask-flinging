@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://lov0d6famlhl"]
+[gd_scene load_steps=7 format=3 uid="uid://lov0d6famlhl"]
 
 [ext_resource type="Script" path="res://scripts/hands.gd" id="1_ne31q"]
 [ext_resource type="Texture2D" uid="uid://csien0c0mnhv3" path="res://resources/sprites/Hand.png" id="2_7jx2p"]
+[ext_resource type="AudioStream" uid="uid://dnakvuscaehso" path="res://resources/Audio/click.wav" id="3_217rs"]
+[ext_resource type="AudioStream" uid="uid://8bch4iw0y6mg" path="res://resources/Audio/laserShoot.wav" id="4_fhva2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l44ir"]
 radius = 120.0
@@ -28,5 +30,12 @@ shape = SubResource("RectangleShape2D_w2d5t")
 position = Vector2(0, 300)
 scale = Vector2(1.69076, 1.69076)
 texture = ExtResource("2_7jx2p")
+
+[node name="cilck" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_217rs")
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fhva2")
+volume_db = 7.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

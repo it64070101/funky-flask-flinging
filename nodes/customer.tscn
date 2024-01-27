@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cb4jjnfm2e3oh"]
+[gd_scene load_steps=18 format=3 uid="uid://cb4jjnfm2e3oh"]
 
 [ext_resource type="Script" path="res://scripts/customer.gd" id="1_7ixep"]
 [ext_resource type="Texture2D" uid="uid://vvletf7vqkor" path="res://resources/sprites/FChildsprite.png" id="2_3tpr2"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ducjfkssec6er" path="res://resources/sprites/bubble_4.png" id="13_3e2bl"]
 [ext_resource type="Texture2D" uid="uid://cmkv7myb2cfj6" path="res://resources/sprites/bubble_5.png" id="14_q3xtt"]
 [ext_resource type="Texture2D" uid="uid://djbrr4k0x3fp7" path="res://resources/sprites/bubble_6.png" id="15_xkc3g"]
+[ext_resource type="AudioStream" uid="uid://doeac4xifglrp" path="res://resources/Audio/hitHurt.wav" id="16_tyjo4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c882v"]
 radius = 60.0
@@ -34,3 +35,6 @@ shape = SubResource("CapsuleShape2D_c882v")
 position = Vector2(0, -208)
 scale = Vector2(0.431667, 0.431667)
 texture = ExtResource("10_x6ad2")
+
+[node name="hit" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("16_tyjo4")

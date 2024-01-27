@@ -48,6 +48,7 @@ func getWantFlask():
 	return Gbl.flask[wantFlask]
 	
 func customerDying():
+	$hit.play()
 	speed = 0
 	$CollisionShape2D.queue_free()
 	await get_tree().create_timer(2).timeout

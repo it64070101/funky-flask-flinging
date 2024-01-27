@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://nodes/main_scene.gd" id="1_g2kx1"]
 [ext_resource type="Texture2D" uid="uid://dbqrkxp7xqcif" path="res://resources/sprites/gameBG.png" id="2_gatwj"]
 [ext_resource type="PackedScene" uid="uid://lov0d6famlhl" path="res://nodes/hands.tscn" id="2_u7ov0"]
-[ext_resource type="PackedScene" uid="uid://b247a6ie7d145" path="res://nodes/ground.tscn" id="4_06gjw"]
+[ext_resource type="PackedScene" path="res://nodes/ground.tscn" id="4_06gjw"]
 [ext_resource type="PackedScene" uid="uid://dvdhqc4pvjmuj" path="res://nodes/flask_spawn.tscn" id="5_t3jhv"]
 [ext_resource type="Script" path="res://scripts/interface.gd" id="6_2pgip"]
 [ext_resource type="PackedScene" uid="uid://bvypfaho063e2" path="res://nodes/customer_spawn.tscn" id="6_y78fq"]
@@ -49,11 +49,14 @@ position = Vector2(960, 2220)
 [node name="Ground3" parent="." instance=ExtResource("4_06gjw")]
 position = Vector2(1980, 1680)
 rotation = 1.57079
+collision_layer = 7
+collision_mask = 7
 
 [node name="Ground4" parent="." instance=ExtResource("4_06gjw")]
 position = Vector2(-60, 1680)
 rotation = 1.57079
-collision_mask = 3
+collision_layer = 7
+collision_mask = 7
 
 [node name="Flask Spawn" parent="." instance=ExtResource("5_t3jhv")]
 position = Vector2(960, 1216)

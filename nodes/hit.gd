@@ -1,9 +1,8 @@
 extends Node2D
 
-func playSmoke():
-	$GPUParticles2D.emitting = true
+func playhit():
 	$Timer.start()
-	$boom.play()
+	$hit.play()
 
 func _on_timer_timeout():
 	self.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceie3x0fh7c8o"]
+[gd_scene load_steps=11 format=3 uid="uid://ceie3x0fh7c8o"]
 
 [ext_resource type="Script" path="res://scripts/flask.gd" id="1_pwe5m"]
 [ext_resource type="Texture2D" uid="uid://bgdoxa4gngabl" path="res://resources/sprites/Flask_base_1.png" id="2_glejm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://daqwk553smpho" path="res://resources/sprites/Flask_base_4.png" id="5_hihtl"]
 [ext_resource type="Texture2D" uid="uid://dg27jrwc1cjbf" path="res://resources/sprites/Flask_base_5.png" id="6_dt7y1"]
 [ext_resource type="Texture2D" uid="uid://cktoqmk0m7as3" path="res://resources/sprites/Flask_base_6.png" id="7_2n6ai"]
+[ext_resource type="AudioStream" uid="uid://doeac4xifglrp" path="res://resources/Audio/hitHurt.wav" id="8_wwwvb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssi78"]
 radius = 90.0
@@ -32,5 +33,8 @@ texture = ExtResource("2_glejm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckCustomer"]
 shape = SubResource("CircleShape2D_hp1ab")
+
+[node name="hit" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_wwwvb")
 
 [connection signal="body_entered" from="CheckCustomer" to="." method="_on_check_customer_body_entered"]
