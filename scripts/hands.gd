@@ -23,7 +23,7 @@ func _input(event):
 			get_parent().add_child(flask)
 			# set diff flask
 			flask.set_random_flask()
-			haveFlask = false
+			haveFlask = true
 			flask.position = position
 			await try_await()
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and picking:
