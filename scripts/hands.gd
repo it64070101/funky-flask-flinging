@@ -41,3 +41,11 @@ func try_await():
 	canShoot = false
 	await get_tree().create_timer(1).timeout
 	canShoot = true
+
+
+func _on_area_2d_body_entered(body):
+	print(body.get_parent())
+	#body.get_parent().remove_child(body)
+	#self.get_parent().add_child(body)
+	
+	#add_child(body)
