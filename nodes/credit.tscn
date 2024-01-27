@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckk82h76fwy8o"]
+[gd_scene load_steps=6 format=3 uid="uid://ckk82h76fwy8o"]
 
 [ext_resource type="Script" path="res://nodes/Credit.gd" id="1_ocuhl"]
+[ext_resource type="Texture2D" uid="uid://dbqrkxp7xqcif" path="res://resources/sprites/gameBG.png" id="2_bvmjr"]
+[ext_resource type="FontFile" uid="uid://b8k5brwvy6lk3" path="res://resources/Menu/Pattaya-Regular.ttf" id="2_rqoqy"]
+
+[sub_resource type="Theme" id="Theme_2ac5n"]
+default_font = ExtResource("2_rqoqy")
 
 [sub_resource type="LabelSettings" id="LabelSettings_cxdhb"]
 font_size = 50
 
 [node name="Credit" type="Node2D"]
 script = ExtResource("1_ocuhl")
+
+[node name="GameBg" type="Sprite2D" parent="."]
+position = Vector2(959, -2)
+texture = ExtResource("2_bvmjr")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -17,6 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="bg" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 0
 offset_right = 1919.0
 offset_bottom = 1084.0
@@ -28,6 +38,7 @@ offset_left = 92.0
 offset_top = 849.0
 offset_right = 655.0
 offset_bottom = 997.0
+theme = SubResource("Theme_2ac5n")
 theme_override_constants/separation = 25
 metadata/_edit_group_ = true
 
