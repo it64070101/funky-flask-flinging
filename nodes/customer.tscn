@@ -24,3 +24,18 @@ texture = ExtResource("1_neldo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_c882v")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -16.0
+offset_top = -168.0
+offset_right = 24.0
+offset_bottom = -128.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -8.0
+offset_right = 32.0
+offset_bottom = 23.0
+text = "meme"

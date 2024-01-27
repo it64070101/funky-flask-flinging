@@ -2,7 +2,9 @@
 
 importer="wav"
 type="AudioStreamWAV"
+
 uid="uid://o4g1tw8vr418"
+
 path="res://.godot/imported/explosion.wav-222557b303e805fd177754649828a9e3.sample"
 
 [deps]
