@@ -15,6 +15,10 @@ run/main_scene="res://nodes/test_scene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Gbl="*res://scripts/gbl.gd"
+
 [display]
 
 window/size/viewport_width=1920
@@ -25,4 +29,5 @@ window/stretch/mode="viewport"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
