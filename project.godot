@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Funky Flask Flinging"
-run/main_scene="res://nodes/test_scene.tscn"
+run/main_scene="res://nodes/mainMenu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 

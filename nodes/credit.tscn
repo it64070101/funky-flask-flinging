@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckk82h76fwy8o"]
+
+[ext_resource type="Script" path="res://nodes/Credit.gd" id="1_ocuhl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cxdhb"]
+font_size = 50
+
+[node name="Credit" type="Node2D"]
+script = ExtResource("1_ocuhl")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1084.0
+color = Color(0.341176, 0.341176, 0.341176, 1)
+
+[node name="MenuButton" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 849.0
+offset_right = 655.0
+offset_bottom = 997.0
+theme_override_constants/separation = 25
+metadata/_edit_group_ = true
+
+[node name="start" type="Button" parent="Control/MenuButton"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/MenuButton/start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/MenuButton/start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back To Menu"
+label_settings = SubResource("LabelSettings_cxdhb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/MenuButton/start" to="." method="_on_start_pressed"]
