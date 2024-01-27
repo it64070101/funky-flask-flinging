@@ -3,11 +3,10 @@ extends Node2D
 var cooldown = 0
 var second = 1
 var rng = RandomNumberGenerator.new()
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _ready():
+	pass
+
 func _process(delta):
 	cooldown += delta
 	if(cooldown >= second):
@@ -19,9 +18,4 @@ func _process(delta):
 		cooldown = 0
 		Gbl.randomflask = int(rng.randf_range(0, 6.0))
 		flask.set_random_flask()
-		
-		
 	pass
-	
-func spawn():
-	await get_tree().create_timer(1).timeout
