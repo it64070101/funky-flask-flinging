@@ -4,8 +4,8 @@ extends CharacterBody2D
 @export var customerWantList = []
 
 var speed
-var minSpeed = 200.0
-var maxSpeed = 200.0
+var minSpeed = 50.0
+var maxSpeed = 100.0
 var wantFlask
 var rng = RandomNumberGenerator.new()
 var gender

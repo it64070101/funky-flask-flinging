@@ -8,6 +8,8 @@ var combo = 0
 var flaskStore = 0
 var gameStart = false
 var lockShoot = false
+var increasingTime = 0
+var speedTime = 1
 
 func _ready():
 	gameStart = false

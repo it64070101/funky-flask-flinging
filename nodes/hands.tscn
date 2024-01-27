@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://lov0d6famlhl"]
 
 [ext_resource type="Script" path="res://scripts/hands.gd" id="1_ne31q"]
-[ext_resource type="Texture2D" uid="uid://df47fxxqu64x4" path="res://resources/sprites/hands.jpg" id="1_qsfwe"]
+[ext_resource type="Texture2D" uid="uid://csien0c0mnhv3" path="res://resources/sprites/Hand.png" id="2_7jx2p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l44ir"]
 radius = 120.0
@@ -14,12 +14,6 @@ collision_layer = 6
 collision_mask = 4
 script = ExtResource("1_ne31q")
 
-[node name="Hands" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.498039)
-position = Vector2(-1.04083e-17, 240)
-scale = Vector2(0.882353, 0.882353)
-texture = ExtResource("1_qsfwe")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 240)
 shape = SubResource("CircleShape2D_l44ir")
@@ -29,5 +23,10 @@ shape = SubResource("CircleShape2D_l44ir")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 330)
 shape = SubResource("RectangleShape2D_w2d5t")
+
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(0, 300)
+scale = Vector2(1.69076, 1.69076)
+texture = ExtResource("2_7jx2p")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

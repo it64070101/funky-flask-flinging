@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 1000.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 5000.0
 var canShoot = true
 var picking = false
 var haveFlask = true
@@ -32,7 +31,6 @@ func _input(event):
 				shootingFlask.tag = holdingFlask.tag
 				shootingFlask.changeTexture(holdingFlask.tag)
 				holdingFlask.queue_free()
-				#flaskBody.shooting()
 				Gbl.lockShoot = true
 				flaskBody = null
 				holdingFlask = null
@@ -45,7 +43,7 @@ func _input(event):
 				holdingFlask.inHand(holdingFlask.tag)
 				flaskBody.changeTexture(holdingFlask.tag)
 				flaskBody.queue_free()
-				#print(flaskBody.position, position)
+				get_parent().deleteFlaskStore()
 			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed and not(Gbl.lockShoot):
 				picking = true
 				position.y = 1740

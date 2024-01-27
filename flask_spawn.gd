@@ -1,7 +1,7 @@
 extends Node2D
 
 var cooldown = 0
-var second = 1
+var second = 3
 var rng = RandomNumberGenerator.new()
 
 func _ready():
@@ -17,6 +17,6 @@ func _process(delta):
 			add_child(flask)
 			flask.position.x = rng.randi_range(-960, 960)
 			cooldown = 0
-			Gbl.randomflask = int(rng.randf_range(0, 6.0))
+			Gbl.randomflask = rng.randi_range(0, 5)
 			flask.set_random_flask()
 			get_parent().addFlaskStore()

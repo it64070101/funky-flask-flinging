@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://cghi5cl21ippl"]
 
 [ext_resource type="Script" path="res://nodes/main_scene.gd" id="1_g2kx1"]
+[ext_resource type="Texture2D" uid="uid://dbqrkxp7xqcif" path="res://resources/sprites/gameBG.png" id="2_gatwj"]
 [ext_resource type="PackedScene" uid="uid://lov0d6famlhl" path="res://nodes/hands.tscn" id="2_u7ov0"]
-[ext_resource type="Texture2D" uid="uid://b4pcbsyp7sda" path="res://icon.svg" id="2_ypdoj"]
 [ext_resource type="PackedScene" uid="uid://b247a6ie7d145" path="res://nodes/ground.tscn" id="4_06gjw"]
 [ext_resource type="PackedScene" uid="uid://dvdhqc4pvjmuj" path="res://nodes/flask_spawn.tscn" id="5_t3jhv"]
 [ext_resource type="Script" path="res://scripts/interface.gd" id="6_2pgip"]
@@ -33,10 +33,9 @@ _data = {
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_g2kx1")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(960, 900)
-scale = Vector2(15, 2.8125)
-texture = ExtResource("2_ypdoj")
+[node name="GameBg" type="Sprite2D" parent="."]
+position = Vector2(960, 1086)
+texture = ExtResource("2_gatwj")
 
 [node name="hands" parent="." instance=ExtResource("2_u7ov0")]
 position = Vector2(960, 660)
