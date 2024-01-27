@@ -12,9 +12,9 @@ var shootingFlask = null
 
 var lockScroll = false
 
-func _process(_delta):
-	print("shootflask : " + str(shootingFlask) + "|" + "holdflask : " + str(holdingFlask)+'\n')
-	print(is_instance_valid(holdingFlask))
+#func _process(_delta):
+	#print("shootflask : " + str(shootingFlask) + "|" + "holdflask : " + str(holdingFlask)+'\n')
+	#print(is_instance_valid(holdingFlask))
 
 func _physics_process(_delta):
 
