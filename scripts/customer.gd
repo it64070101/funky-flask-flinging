@@ -10,6 +10,7 @@ var wantFlask
 var rng = RandomNumberGenerator.new()
 var gender
 var age
+var gravity = 0
 
 func _ready():
 	rng.randomize()
@@ -17,16 +18,16 @@ func _ready():
 	wantFlask = rng.randi_range(0, 5)
 	var spriteID = rng.randi_range(0, 5)
 	$Custosprite.set_texture(customerSpriteList[spriteID])
-	if (true):
+	if (spriteID == 0 || spriteID == 1 || spriteID == 2):
 		gender = "Female"
-	elif (true):
+	else:
 		gender = "Male"
 		
-	if (true):
+	if (spriteID == 0 || spriteID == 3):
 		age = "young"
-	elif (true):
+	elif (spriteID == 2 || spriteID == 5):
 		age = "adult"
-	elif (true):
+	else:
 		age = "old"
 	$Want.set_texture(customerWantList[wantFlask])
 	add_to_group("customer")
@@ -39,6 +40,7 @@ func _physics_process(_delta):
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
+	velocity.y += gravity * _delta
 	
 	move_and_slide()
 	if (position.x < 0):
@@ -53,3 +55,24 @@ func customerDying():
 	$CollisionShape2D.queue_free()
 	await get_tree().create_timer(2).timeout
 	self.queue_free()
+	
+func changeToFrog():
+	$Custosprite.texture = load("res://resources/sprites/frog.png")
+
+func changeToMale():
+	$Custosprite.set_texture(customerSpriteList[6])
+
+func changeToFemale():
+	$Custosprite.set_texture(customerSpriteList[7])
+	
+func deAge():
+	if (age == "young"):
+		$Custosprite.texture = null
+	elif (age == "adult" && gender == "Female"):
+		$Custosprite.set_texture(customerSpriteList[0])
+	elif (age == "adult"):
+		$Custosprite.set_texture(customerSpriteList[3])
+	elif (gender == "Female"):
+		$Custosprite.set_texture(customerSpriteList[2])
+	else:
+		$Custosprite.set_texture(customerSpriteList[5])
