@@ -16,6 +16,6 @@ func _process(delta):
 func addFlaskStore():
 	flaskStore += 1
 	print(flaskStore)
-	if flaskStore >= 5:
+	if flaskStore >= 50:
 		$Camera/Control.gameOverScreen()
 		Gbl.gameStart = false

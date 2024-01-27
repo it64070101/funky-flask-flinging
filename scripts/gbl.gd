@@ -7,11 +7,10 @@ var stress = 0
 var combo = 0
 var flaskStore = 0
 var gameStart = false
-var lose
+var lockShoot = false
 
 func _ready():
 	gameStart = false
-	lose = false
 
 func addMoney():
 	money += combo
