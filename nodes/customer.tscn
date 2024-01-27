@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cb4jjnfm2e3oh"]
+[gd_scene load_steps=18 format=3 uid="uid://cb4jjnfm2e3oh"]
 
 [ext_resource type="Script" path="res://scripts/customer.gd" id="1_7ixep"]
 [ext_resource type="Texture2D" uid="uid://vvletf7vqkor" path="res://resources/sprites/FChildsprite.png" id="2_3tpr2"]
@@ -9,6 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://cog7nysx6yei0" path="res://resources/sprites/MGBendSprite.png" id="7_8dajf"]
 [ext_resource type="Texture2D" uid="uid://dmcd28j1e61nm" path="res://resources/sprites/MOldSprite.png" id="8_3xpms"]
 [ext_resource type="Texture2D" uid="uid://ckwcjaj5jdu80" path="res://resources/sprites/Msprite.png" id="9_ybjoa"]
+[ext_resource type="Texture2D" uid="uid://bgdoxa4gngabl" path="res://resources/sprites/Flask_base_1.png" id="10_ayr8a"]
+[ext_resource type="Texture2D" uid="uid://dj1qkf62qqhpm" path="res://resources/sprites/Flask_base.png" id="10_yyopa"]
+[ext_resource type="Texture2D" uid="uid://x8eg5c15i1we" path="res://resources/sprites/Flask_base_2.png" id="11_crbyw"]
+[ext_resource type="Texture2D" uid="uid://bvuhv43ywmhbx" path="res://resources/sprites/Flask_base_3.png" id="12_iuutj"]
+[ext_resource type="Texture2D" uid="uid://daqwk553smpho" path="res://resources/sprites/Flask_base_4.png" id="13_3ns6m"]
+[ext_resource type="Texture2D" uid="uid://dg27jrwc1cjbf" path="res://resources/sprites/Flask_base_5.png" id="14_4hbav"]
+[ext_resource type="Texture2D" uid="uid://cktoqmk0m7as3" path="res://resources/sprites/Flask_base_6.png" id="15_v5hyd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c882v"]
 radius = 60.0
@@ -17,23 +24,14 @@ height = 240.0
 [node name="Customer" type="CharacterBody2D"]
 script = ExtResource("1_7ixep")
 customerSpriteList = [ExtResource("2_3tpr2"), ExtResource("3_okubb"), ExtResource("4_u5gam"), ExtResource("5_4pdol"), ExtResource("6_wmn4m"), ExtResource("7_8dajf"), ExtResource("8_3xpms"), ExtResource("9_ybjoa")]
+customerWantList = [ExtResource("10_ayr8a"), ExtResource("11_crbyw"), ExtResource("12_iuutj"), ExtResource("13_3ns6m"), ExtResource("14_4hbav"), ExtResource("15_v5hyd")]
 
 [node name="Custosprite" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_c882v")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -16.0
-offset_top = -168.0
-offset_right = 24.0
-offset_bottom = -128.0
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = -8.0
-offset_right = 32.0
-offset_bottom = 23.0
-text = "meme"
+[node name="Want" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -176)
+scale = Vector2(0.303333, 0.303333)
+texture = ExtResource("10_yyopa")

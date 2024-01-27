@@ -12,4 +12,4 @@ func _process(_delta):
 	
 func gameOverScreen():
 	$"Game Over".visible = true
-	$"Game Over".set_text("Game Over\nToo Many Flasks")
+	#$"Game Over".set_text("Game Over\nToo Many Flasks")

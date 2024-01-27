@@ -29,13 +29,10 @@ func _on_check_customer_body_entered(body):
 	if (body.is_in_group("customer")):
 		print(body.getWantFlask(),tag)
 		if(body.getWantFlask() == tag):
-			print("yes")
 			Gbl.lockShoot = false
-			
 			body.queue_free()
 			self.queue_free()
 		else:
-			print("No")
 			Gbl.lockShoot = false
 			var smokePlayer = smoke.instantiate()
 			self.get_parent().add_child(smokePlayer)
@@ -44,6 +41,7 @@ func _on_check_customer_body_entered(body):
 			smokePlayer.playSmoke()
 			body.customerDying()
 			self.queue_free()
+			get_parent().addStress()
 
 func set_random_flask():
 	random_number = Gbl.rng.randi_range(0, 5)
