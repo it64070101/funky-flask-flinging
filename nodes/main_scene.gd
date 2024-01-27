@@ -29,11 +29,10 @@ func deleteFlaskStore():
 	flaskStore -= 1
 
 func addStress():
-	stress += 1
-	if stress >= 3:
+	Gbl.stress += 1
+	if Gbl.stress >= 3:
 		$Camera/Control.gameOverScreen()
 		Gbl.gameStart = false
-	Gbl.stress += 1
 	$Camera/Control/Stress.set_text("Stress "+str(Gbl.stress)+"/3")
 
 func increasing(delta):

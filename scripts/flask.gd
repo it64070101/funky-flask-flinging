@@ -39,6 +39,7 @@ func _on_check_customer_body_entered(body):
 			smokePlayer.global_position = body.global_position
 			smokePlayer.playSmoke()
 		elif (tag == "Fly"):
+			body.setfly()
 			body.gravity = -5000
 		elif(tag == "Frog"):
 			body.changeToFrog()
@@ -49,6 +50,8 @@ func _on_check_customer_body_entered(body):
 				body.changeToFemale()
 		elif(tag == "DeAge"):
 			body.deAge()
+		elif(tag == "Normal"):
+			body.onEffect()
 		if(body.getWantFlask() == tag):
 			get_parent().addMoney()
 			Gbl.lockShoot = false
