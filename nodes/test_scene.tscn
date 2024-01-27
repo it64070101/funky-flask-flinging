@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://lov0d6famlhl" path="res://nodes/hands.tscn" id="2_u7ov0"]
 [ext_resource type="Texture2D" uid="uid://b4pcbsyp7sda" path="res://icon.svg" id="2_ypdoj"]
 [ext_resource type="PackedScene" uid="uid://cb4jjnfm2e3oh" path="res://nodes/customer.tscn" id="3_26pvg"]
-[ext_resource type="PackedScene" path="res://nodes/ground.tscn" id="4_06gjw"]
+[ext_resource type="PackedScene" uid="uid://b247a6ie7d145" path="res://nodes/ground.tscn" id="4_06gjw"]
 [ext_resource type="PackedScene" uid="uid://dvdhqc4pvjmuj" path="res://nodes/flask_spawn.tscn" id="5_t3jhv"]
 
 [node name="Node2D" type="Node2D"]
@@ -35,6 +35,7 @@ rotation = 1.57079
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(960, 540)
+position_smoothing_enabled = true
 
 [node name="Flask Spawn" parent="." instance=ExtResource("5_t3jhv")]
 position = Vector2(960, 1216)
