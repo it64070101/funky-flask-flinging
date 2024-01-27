@@ -18,6 +18,7 @@ func _process(delta):
 		flask.position.x = rng.randi_range(-960, 960)
 		cooldown = 0
 		Gbl.randomflask = int(rng.randf_range(0, 6.0))
+		flask.set_random_flask()
 		
 		
 	pass
