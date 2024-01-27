@@ -4,6 +4,7 @@ extends RigidBody2D
 var isInHand
 
 var tag = ""
+var smoke = preload("res://resources/SFX/smokes.tscn")
 
 var isShoot
 # Called when the node enters the scene tree for the first time.
