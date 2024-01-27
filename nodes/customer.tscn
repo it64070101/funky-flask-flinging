@@ -9,12 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://cog7nysx6yei0" path="res://resources/sprites/MGBendSprite.png" id="7_8dajf"]
 [ext_resource type="Texture2D" uid="uid://dmcd28j1e61nm" path="res://resources/sprites/MOldSprite.png" id="8_3xpms"]
 [ext_resource type="Texture2D" uid="uid://ckwcjaj5jdu80" path="res://resources/sprites/Msprite.png" id="9_ybjoa"]
-[ext_resource type="Texture2D" uid="uid://ct06chgdn02ky" path="res://resources/sprites/bubble_1.png" id="10_x6ad2"]
-[ext_resource type="Texture2D" uid="uid://dmevlndi5le8" path="res://resources/sprites/bubble_2.png" id="11_gf51s"]
-[ext_resource type="Texture2D" uid="uid://blcgwi4qvfkdm" path="res://resources/sprites/bubble_3.png" id="12_4ksae"]
-[ext_resource type="Texture2D" uid="uid://lq5jk13iblk" path="res://resources/sprites/bubble_4.png" id="13_3e2bl"]
-[ext_resource type="Texture2D" uid="uid://b5tmmqtmwmvl7" path="res://resources/sprites/bubble_5.png" id="14_q3xtt"]
-[ext_resource type="Texture2D" uid="uid://cnge6aqx6u8f8" path="res://resources/sprites/bubble_6.png" id="15_xkc3g"]
+[ext_resource type="Texture2D" uid="uid://cy2cxtfiu8gjw" path="res://resources/sprites/bubble_1.png" id="10_x6ad2"]
+[ext_resource type="Texture2D" uid="uid://djlk43bjglebj" path="res://resources/sprites/bubble_2.png" id="11_gf51s"]
+[ext_resource type="Texture2D" uid="uid://2c4wo74fnmpc" path="res://resources/sprites/bubble_3.png" id="12_4ksae"]
+[ext_resource type="Texture2D" uid="uid://ducjfkssec6er" path="res://resources/sprites/bubble_4.png" id="13_3e2bl"]
+[ext_resource type="Texture2D" uid="uid://cmkv7myb2cfj6" path="res://resources/sprites/bubble_5.png" id="14_q3xtt"]
+[ext_resource type="Texture2D" uid="uid://djbrr4k0x3fp7" path="res://resources/sprites/bubble_6.png" id="15_xkc3g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c882v"]
 radius = 60.0
@@ -22,7 +22,7 @@ height = 240.0
 
 [node name="Customer" type="CharacterBody2D"]
 script = ExtResource("1_7ixep")
-customerSpriteList = [ExtResource("2_3tpr2"), ExtResource("3_okubb"), ExtResource("4_u5gam"), ExtResource("5_4pdol"), ExtResource("6_wmn4m"), ExtResource("7_8dajf"), ExtResource("8_3xpms"), ExtResource("9_ybjoa")]
+customerSpriteList = [ExtResource("2_3tpr2"), ExtResource("4_u5gam"), ExtResource("5_4pdol"), ExtResource("6_wmn4m"), ExtResource("8_3xpms"), ExtResource("9_ybjoa"), ExtResource("3_okubb"), ExtResource("7_8dajf")]
 customerWantList = [ExtResource("10_x6ad2"), ExtResource("11_gf51s"), ExtResource("12_4ksae"), ExtResource("13_3e2bl"), ExtResource("14_q3xtt"), ExtResource("15_xkc3g")]
 
 [node name="Custosprite" type="Sprite2D" parent="."]

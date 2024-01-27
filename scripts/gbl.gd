@@ -1,6 +1,6 @@
 extends Node
 var rng = RandomNumberGenerator.new()
-var flask = ["Bomb","Frog","GenderBend","DeAge","Fly","Normal"] # plase add name
+var flask = ["Bomb","Frog","GenderBend","DeAge","Fly","Normal"]
 var randomflask = 0
 var money = 0
 var stress = 0
