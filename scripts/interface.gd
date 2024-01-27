@@ -7,9 +7,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 	
 func gameOverScreen():
 	$"Game Over".visible = true
-	$"Game Over".set_text("Game Over\nToo Many Flasks")
+	#$"Game Over".set_text("Game Over\nToo Many Flasks")

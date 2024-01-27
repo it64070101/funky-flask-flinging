@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://iinxybju4wvw"]
+[gd_scene load_steps=10 format=3 uid="uid://iinxybju4wvw"]
 
+[ext_resource type="Script" path="res://resources/SFX/smokes.gd" id="1_j76d8"]
 [ext_resource type="Texture2D" uid="uid://ccwwmg0erx82d" path="res://resources/SFX/smake_text.png" id="1_vhoq4"]
 
 [sub_resource type="Curve" id="Curve_uhek3"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.813239, 0.696861), -0.575381, -0.575381, 0, 0, Vector2(1, 0.0147983), -6.75448, 0.0, 0, 0]
+_data = [Vector2(0, 0.477387), 0.0, 0.0, 0, 0, Vector2(0.738903, 0.320603), -0.547315, -0.547315, 0, 0, Vector2(1, 0.0147983), -2.56751, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_y3bvj"]
@@ -26,10 +27,10 @@ curve = SubResource("Curve_os1qy")
 lifetime_randomness = 1.0
 particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
-spread = 121.8
+spread = 180.0
 flatness = 0.049
-initial_velocity_min = 26.67
-initial_velocity_max = 57.78
+initial_velocity_min = 351.75
+initial_velocity_max = 434.68
 gravity = Vector3(0, 0, 0)
 scale_min = 0.4
 scale_curve = SubResource("CurveTexture_o3a1m")
@@ -45,12 +46,19 @@ turbulence_initial_displacement_min = -6.1
 turbulence_initial_displacement_max = -5.2
 
 [node name="smokes" type="Node2D"]
+script = ExtResource("1_j76d8")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 emitting = false
-amount = 150
+amount = 50
 process_material = SubResource("ParticleProcessMaterial_odbuw")
 texture = ExtResource("1_vhoq4")
 one_shot = true
 explosiveness = 1.0
-randomness = 0.17
+randomness = 0.18
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

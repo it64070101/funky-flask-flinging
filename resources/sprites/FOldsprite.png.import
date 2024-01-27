@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd1vgy60n3ki2"
-path="res://.godot/imported/TitleCard.png-ddfd7cfe6b4aa41f00e3de3e74cf92f2.ctex"
+uid="uid://dyfxxqm08rudt"
+path="res://.godot/imported/FOldsprite.png-80c2ea5fa9105a2049e42bd5f68b00b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/TitleCard.png"
-dest_files=["res://.godot/imported/TitleCard.png-ddfd7cfe6b4aa41f00e3de3e74cf92f2.ctex"]
+source_file="res://resources/sprites/FOldsprite.png"
+dest_files=["res://.godot/imported/FOldsprite.png-80c2ea5fa9105a2049e42bd5f68b00b5.ctex"]
 
 [params]
 
