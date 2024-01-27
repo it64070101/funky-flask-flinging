@@ -19,4 +19,3 @@ func _process(delta):
 		Gbl.randomflask = int(rng.randf_range(0, 6.0))
 		flask.set_random_flask()
 		Gbl.addFlaskStore()
-	
