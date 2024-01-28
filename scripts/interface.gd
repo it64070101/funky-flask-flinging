@@ -11,6 +11,6 @@ func _process(_delta):
 	pass
 	
 func gameOverScreen():
-	$gameOver._set_position(Vector2(240.0,240.0))
+	$"Game Over".visible = true
 	$Button2.visible = true
 	#$"Game Over".set_text("Game Over\nToo Many Flasks")
