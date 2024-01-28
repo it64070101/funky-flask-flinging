@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dvdhqc4pvjmuj" path="res://nodes/flask_spawn.tscn" id="5_t3jhv"]
 [ext_resource type="Script" path="res://scripts/interface.gd" id="6_2pgip"]
 [ext_resource type="PackedScene" uid="uid://bvypfaho063e2" path="res://nodes/customer_spawn.tscn" id="6_y78fq"]
-[ext_resource type="Texture2D" uid="uid://bolqoot03rbet" path="res://sprite/GameOverCard.png" id="8_1ee42"]
+[ext_resource type="Texture2D" path="res://sprite/GameOverCard.png" id="8_1ee42"]
 [ext_resource type="AudioStream" uid="uid://dojeksf8n7p3t" path="res://resources/Audio/mainTheme_Chinese_Blues_Moore_and_Gardner.mp3" id="9_w6u3m"]
 [ext_resource type="FontFile" uid="uid://b8k5brwvy6lk3" path="res://resources/Menu/Pattaya-Regular.ttf" id="10_hpo4v"]
 [ext_resource type="Texture2D" uid="uid://dylp58o5j27b3" path="res://resources/sprites/Card.png" id="11_kl2ps"]
